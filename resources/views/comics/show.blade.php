@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class='return'>
-            <a href="/homeComics">HOME PAGE</a>
+            <a href="/comics">HOME PAGE</a>
         </div>
     </div>
 @endsection

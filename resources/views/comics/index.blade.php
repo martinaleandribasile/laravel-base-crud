@@ -38,7 +38,7 @@
                             <h3>{{ $comic->price }}</h3>
                         </td>
                         <td>
-                            <a href="{{ route('homeComics.show', $comic->id) }}">Dettagli</a>
+                            <a href="{{ route('comics.show', $comic->id) }}">Dettagli</a>
                         </td>
                     </tr>
                 @endforeach
