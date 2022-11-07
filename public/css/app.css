@@ -31,3 +31,61 @@ img {
   padding: 10px;
 }
 
+.dettailTitle {
+  padding: 20px 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dettailTitle h1 {
+  color: blue;
+}
+
+.dettailPoster {
+  width: 300px;
+  height: 500px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  width: 500px;
+}
+
+.box > .dettailBox {
+  width: 100%;
+}
+
+.box > .dettailBox > * {
+  width: 50%;
+  text-align: center;
+}
+
+.tagdettail {
+  color: green;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.dettailBox {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.return {
+  margin: 100px 0;
+  border: 5px solid red;
+  width: 120px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.return > a {
+  color: red;
+}
+
