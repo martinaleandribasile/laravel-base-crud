@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\comic;
+use App\Comic;
 use Illuminate\Http\Request;
 
 
@@ -15,7 +15,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comics = comic::all();
+        $comics = Comic::all();
         return view('homeComics.index', compact('comics'));
     }
 
@@ -43,22 +43,22 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\comic  $comic
+     * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $comic = comic::find($id);
+        $comic = Comic::find($id);
         return view('homeComics.show', compact('comic'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\comic  $comic
+     * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function edit(comic $comic)
+    public function edit(Comic $comic)
     {
         //
     }
@@ -67,10 +67,10 @@ class ComicController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\comic  $comic
+     * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, comic $comic)
+    public function update(Request $request, Comic $comic)
     {
         //
     }
@@ -78,10 +78,10 @@ class ComicController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\comic  $comic
+     * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(comic $comic)
+    public function destroy(Comic $comic)
     {
         //
     }

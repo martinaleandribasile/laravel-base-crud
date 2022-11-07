@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use App\comic;
+use App\Comic;
 
 
 class comicsTableSeeder extends Seeder
