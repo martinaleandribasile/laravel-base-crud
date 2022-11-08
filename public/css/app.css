@@ -9,26 +9,147 @@ img {
   height: 100%;
 }
 
-.title {
-  text-align: center;
-  color: red;
+.boxcontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .bg-blu {
+  background-color: #0282f9;
+}
+
+header .bg-blu .header-blu {
+  height: 30px;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+header .linksbox {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .linksbox .himgbox {
+  width: 80px;
+}
+
+header .linksbox .links {
+  display: flex;
+  gap: 20px;
+}
+
+header .linksbox .links a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+header .linksbox .hsearch {
+  display: flex;
+}
+
+header .linksbox .hsearch #search {
+  border: 0;
+  border-bottom: 2px solid blue;
+  text-align: end;
+}
+
+.bg-main {
+  background-color: rgb(34, 34, 34);
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-main .boxcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 25px;
+}
+
+.bg-main .boxcontainer .cardcomic {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: calc(16.6666666667% - 20px);
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+.bg-main .boxcontainer .cardcomic .linkimgbox {
+  height: 280px;
+}
+
+.bg-main .boxcontainer .cardcomic:hover .linkimgbox {
+  display: none;
+}
+
+.bg-main .boxcontainer .cardcomic:hover .dettailslink {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.bg-main .boxcontainer .imgbox {
+  width: 100%;
+  height: 100%;
+}
+
+.bg-main .boxcontainer .dettailslink {
+  width: 100%;
+  height: 280px;
+  display: none;
+}
+
+.main-blu {
+  background-color: #0282f9;
   padding: 30px 0;
 }
 
-.main {
-  max-width: 1200px;
-  margin: 20px auto;
+.main-blu .shop {
+  display: flex;
 }
 
-.main .poster {
-  text-align: left;
-  padding-left: 10px;
+.main-blu .shop .shopcard {
+  width: calc(20% - 20px);
+  height: 70px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.main .imgposter {
-  width: 200px;
-  height: 250px;
-  padding: 10px;
+.main-blu .shop .shopcard a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.main-blu .shop .shopcard a p {
+  margin: 0 !important;
+}
+
+.main-blu .shop .shopcard img {
+  width: 20%;
+}
+
+.tagseries {
+  text-align: center;
+}
+
+.tagseries h4 {
+  position: absolute;
+  top: 530px;
+  transform: translate(0, 50%);
+  width: 250px;
+  padding: 10px 0;
+  background-color: #0282f9;
 }
 
 .dettailTitle {
@@ -78,14 +199,93 @@ img {
 
 .return {
   margin: 100px 0;
-  border: 5px solid red;
-  width: 120px;
+  width: 100%;
   padding: 5px;
   text-align: center;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 
-.return > a {
-  color: red;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 50px 0;
+}
+
+form .box-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form .box-input label {
+  width: 200px;
+}
+
+form .box-input input,
+form .box-input textarea {
+  width: 25%;
+}
+
+form a {
+  width: 200px;
+}
+
+footer .bg-footer {
+  background-color: black;
+  height: 500px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+footer .bg-footer .rightlinks {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 10% 0;
+}
+
+footer .bg-footer .rightlinks .linksbox {
+  display: flex;
+  gap: 30px;
+}
+
+footer .bg-footer .rightlinks .linksbox ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .bg-footer .rightlinks .linksbox ul li {
+  padding: 2px;
+}
+
+footer .bg-footer .rightlinks .linksbox ul li a {
+  text-decoration: none;
+  color: gray;
+}
+
+footer .bg-footer .rightlinks .copyright {
+  color: grey;
+}
+
+footer .bg-footer .flogo {
+  align-self: end;
+  margin-right: 10%;
+}
+
+.socialbox {
+  padding: 30px 10% 30px;
+  background-color: #434343;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socialbox i {
+  color: grey;
+  font-size: 30px;
 }
 
