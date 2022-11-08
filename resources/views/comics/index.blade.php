@@ -15,7 +15,8 @@
                     </a>
                     <div class="dettailslink">
                         <a class="btn btn-success w-50" href="{{ route('comics.show', $comic->id) }}">Dettagli</a>
-                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST"
+                            onsubmit="askconfirm(event) ">
                             @csrf
                             @method('DELETE')
                             <input class="btn btn-danger" type="submit" value="Cancella">

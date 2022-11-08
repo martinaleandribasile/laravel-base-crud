@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comic;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Log;
 
 class ComicController extends Controller
 {
@@ -89,6 +89,7 @@ class ComicController extends Controller
     {
         //
         $comic->delete();
+        Log::debug("sono dentro destroy");
         return redirect()->route('comics.index');
     }
 }
