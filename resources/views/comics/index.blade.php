@@ -5,44 +5,60 @@
 @endsection
 
 @section('contentMain')
-    <h1 class="title">COMICS</h1>
-    <div class="main">
-        <table style="width: 100%">
-            <thead>
-                <tr>
-                    <th class="poster">
-                        <h2>POSTER:</h2>
-                    </th>
-                    <th>
-                        <h2>TITOLO:</h2>
-                    </th>
-                    <th>
-                        <h2>PREZZO:</h2>
-                    </th>
-                    <th>
-                        <h2>DETTAGLI:</h2>
-                    </th>
-                </tr>
-            </thead>
-            <tbody style="text-align: center">
-                @foreach ($comics as $comic)
-                    <tr>
-                        <td>
-                            <p class="imgposter"><img src="{{ $comic->thumb }}" alt=""></p>
-                        </td>
-                        <td>
-                            <h3>{{ $comic->title }}</h3>
-                        </td>
-
-                        <td>
-                            <h3>{{ $comic->price }}</h3>
-                        </td>
-                        <td>
-                            <a href="{{ route('comics.show', $comic->id) }}">Dettagli</a>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+    <div class="bg-main">
+        <a href="{{ route('comics.create') }}" class=" mb-5 btn btn-success"> ADD NEW</a>
+        <div class="boxcontainer text-white">
+            @foreach ($comics as $comic)
+                <div class="cardcomic">
+                    <a class="linkimgbox" href="{{ route('comics.show', $comic->id) }}">
+                        <img class="imgbox" src="{{ $comic['thumb'] }}" alt="">
+                    </a>
+                    <div class="dettailslink">
+                        <a class="btn btn-success w-50" href="{{ route('comics.show', $comic->id) }}">Dettagli</a>
+                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <input class="btn btn-danger" type="submit" value="Cancella">
+                        </form>
+                    </div>
+                    <h6 class="pe-4">{{ $comic['title'] }}</h6>
+                </div>
+            @endforeach
+        </div>
+        <button class="btn btn-primary">LOAD MORE</button>
+    </div>
+    <div class="main-blu">
+        <div class="boxcontainer shop">
+            <div class="shopcard">
+                <img src="{{ asset('images/buy-comics-digital-comics.png') }}" alt="">
+                <a href="">
+                    <p>DIGITAL COMICS</p>
+                </a>
+            </div>
+            <div class="shopcard">
+                <img src="{{ asset('images/buy-comics-merchandise.png') }}" alt="">
+                <a href="">
+                    <p>DC MERCHANDISE</p>
+                </a>
+            </div>
+            <div class="shopcard">
+                <img src="{{ asset('images/buy-comics-subscriptions.png') }}" alt="">
+                <a href="">
+                    <p>SUBSCRIPTION</p>
+                </a>
+            </div>
+            <div class="shopcard">
+                <img src="{{ asset('images/buy-comics-shop-locator.png') }}" alt="">
+                <a href="">
+                    <p>COMIC SHOP LOCATION</p>
+                </a>
+            </div>
+            <div class="shopcard">
+                <img src="{{ asset('images/buy-dc-power-visa.svg') }}" alt="">
+                <a href="">
+                    <p>DC POWER VISA</p>
+                </a>
+            </div>
+        </div>
     </div>
 @endsection

@@ -5,7 +5,7 @@
 @endsection
 
 @section('contentMain')
-    <div class="main">
+    <div class="boxcontainer">
         <div class="dettailTitle">
             <h1>{{ $comic['title'] }}</h1>
             <p>{{ $comic['description'] }}</p>
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class='return'>
-            <a href="/comics">HOME PAGE</a>
+            <a href="/comics" class="btn btn-danger">HOME PAGE</a>
         </div>
     </div>
 @endsection
