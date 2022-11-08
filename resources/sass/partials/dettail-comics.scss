@@ -48,13 +48,10 @@
 
 .return {
     margin: 100px 0;
-    border: 5px solid red;
-    width: 120px;
+    width: 100%;
     padding: 5px;
     text-align: center;
     text-decoration: none;
-
-    &>a {
-        color: red;
-    }
+    display: flex;
+    justify-content: center;
 }

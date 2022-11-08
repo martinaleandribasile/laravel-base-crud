@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 50px 0;
+
+    .box-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        label {
+            width: 200px;
+        }
+
+        input,
+        textarea {
+            width: 25%;
+        }
+    }
+
+    a {
+        width: 200px;
+    }
+}

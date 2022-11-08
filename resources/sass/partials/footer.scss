@@ -1,0 +1,61 @@
+footer {
+    .bg-footer {
+
+        background-color: black;
+        height: 500px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .rightlinks {
+            display: flex;
+            flex-direction: column;
+            padding: 60px 10% 0;
+
+            .linksbox {
+                display: flex;
+                gap: 30px;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+
+                    li {
+                        padding: 2px;
+
+                        a {
+                            text-decoration: none;
+                            color: gray;
+                        }
+                    }
+                }
+            }
+
+            .copyright {
+                color: grey;
+            }
+
+
+        }
+
+
+        .flogo {
+            align-self: end;
+            margin-right: 10%;
+        }
+    }
+}
+
+.socialbox {
+    padding: 30px 10% 30px;
+    background-color: #434343;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    i {
+        color: grey;
+        font-size: 30px;
+    }
+}
