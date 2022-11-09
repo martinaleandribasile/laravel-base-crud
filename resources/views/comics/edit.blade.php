@@ -25,7 +25,7 @@
             </div>
             <div class="box-input">
                 <label for="description">Descrizione:</label>
-                <textarea name="description" value="{{ old('description', $comic->description) }}" id=""></textarea>
+                <textarea name="description" id="">{{ old('description', $comic->description) }}</textarea>
             </div>
             <div class="box-input">
                 <label for="thumb">Immagine Copertina:</label>

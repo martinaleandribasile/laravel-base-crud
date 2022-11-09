@@ -24,7 +24,7 @@
             </div>
             <div class="box-input">
                 <label for="description">Descrizione:</label>
-                <textarea name="description" id="" cols="30" rows="10" value='{{ old('description', '') }}'></textarea>
+                <textarea name="description" id="" cols="30" rows="10">{{ old('description', '') }}</textarea>
             </div>
             <div class="box-input">
                 <label for="thumb">Immagine Copertina:</label>
