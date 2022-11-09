@@ -37,6 +37,8 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validationData($request);
+
         $data = $request->all();
         $newcomic = new Comic;
         $newcomic->fill($data);
@@ -65,6 +67,7 @@ class ComicController extends Controller
     public function edit(Comic $comic)
     {
         //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -77,6 +80,10 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         //
+        $this->validationData($request);
+        $data = $request->all();
+        $comic->update($data);
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
@@ -91,5 +98,18 @@ class ComicController extends Controller
         $comic->delete();
         Log::debug("sono dentro destroy");
         return redirect()->route('comics.index');
+    }
+
+    public function validationData(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|unique:comics|max:190|min:1|string',
+            'description' => 'min:1|string',
+            'thumb' => 'url',
+            'price' => 'numeric|min:1',
+            'serie' => 'max:90|min:1|string',
+            'sale_date' => 'date',
+            'type' => 'string|min:1|max:90'
+        ]);
     }
 }

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-    Create new record
+    Edit record
 @endsection
 
 @section('contentMain')
@@ -16,38 +16,39 @@
     @endif
     <div class="boxcontainer">
         <h1 class="text-center text-uppercase text-success">Aggiungi un nuovo Comic</h1>
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.update', $comic->id) }}" method="POST">
             @csrf
+            @method('PUT')
             <div class="box-input">
                 <label for="title">Titolo:</label>
-                <input type="text" name="title" value='{{ old('title', '') }}' required />
+                <input type="text" name="title" value="{{ old('title', $comic->title) }}">
             </div>
             <div class="box-input">
                 <label for="description">Descrizione:</label>
-                <textarea name="description" id="" cols="30" rows="10" value='{{ old('description', '') }}'></textarea>
+                <textarea name="description" value="{{ old('description', $comic->description) }}" id=""></textarea>
             </div>
             <div class="box-input">
                 <label for="thumb">Immagine Copertina:</label>
-                <input type='text' name="thumb" value='{{ old('thumb', '') }}' />
+                <input type='text' name="thumb" value="{{ old('thumb', $comic->thumb) }}">
             </div>
             <div class="box-input">
                 <label for="price">Prezzo:</label>
-                <input type="float" name="price" min="0" value='{{ old('price', '') }}' required />
+                <input type="float" name="price" min="0" value="{{ old('price', $comic->price) }}">
             </div>
             <div class="box-input">
                 <label for="series">Serie:</label>
-                <input type="text" name="series" value='{{ old('series', '') }}' />
+                <input type="text" name="series" value="{{ old('series', $comic->series) }}">
             </div>
             <div class="box-input">
                 <label for="sale_date">Data Uscita:</label>
-                <input type="date" name="sale_date" value='{{ old('sale_date', '') }}' />
+                <input type="date" name="sale_date" value="{{ old('sale_date', $comic->sale_date) }}">
             </div>
             <div class="box-input">
                 <label for="type">Tipologia:</label>
-                <input type="text" name="type" />
+                <input type="text" name="type" value="{{ old('type', $comic->type) }}">
             </div>
             <div class="box-input pt-5">
-                <input type="submit" class="btn btn-success" value="Registra">
+                <input type="submit" class="btn btn-success" value="Aggiorna">
             </div>
         </form>
     </div>

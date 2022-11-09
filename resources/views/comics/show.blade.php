@@ -35,6 +35,9 @@
             </div>
         </div>
         <div class='return'>
+            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning">EDIT</a>
+        </div>
+        <div class='return'>
             <a href="/comics" class="btn btn-danger">HOME PAGE</a>
         </div>
     </div>

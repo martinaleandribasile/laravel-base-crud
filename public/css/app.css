@@ -94,6 +94,7 @@ header .linksbox .hsearch #search {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .bg-main .boxcontainer .imgbox {
