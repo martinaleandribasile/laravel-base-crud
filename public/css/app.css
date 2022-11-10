@@ -219,6 +219,8 @@ form .box-input {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  width: 85%;
 }
 
 form .box-input label {
